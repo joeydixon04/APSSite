@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="AnchorPoint Supports — Person-centered support for seniors and adults with IDD in Prairie Village, KS."/>
+  <title>Anchor Point Supports</title>
+  <link rel="icon" type="image/png" href="logo.png"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .btn-outline-dark{background:transparent;color:var(--black);border-color:#ccc;}
+    .btn-outline-dark:hover{background:var(--black);color:#fff;border-color:var(--black);}
+  </style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header class="header-bar" role="banner">
+  <img src="header-banner.png" class="header-bar-bg" alt="" onerror="this.style.display='none'"/>
+  <div class="header-bar-bg-fallback" aria-hidden="true"></div>
+  <div class="header-bar-inner"></div>
+</header>
+
+<nav class="nav-bar" role="navigation" aria-label="Main navigation">
+  <div class="nav-bar-inner">
+    <div class="nav-items" role="menubar">
+      <div class="nav-item"><button class="nav-item-btn" aria-haspopup="true" aria-expanded="false">Home <span class="chevron" aria-hidden="true"></span></button><div class="dropdown" role="menu"><a href="#hero">Introduction</a><a href="#services">Services</a><a href="#who-we-serve">Who We Serve</a><a href="#how-we-work">How We Work</a></div></div>
+      <div class="nav-item"><button class="nav-item-btn" aria-haspopup="true" aria-expanded="false">About <span class="chevron" aria-hidden="true"></span></button><div class="dropdown" role="menu"><a href="#about">About Scott</a><a href="#credentials">Credentials</a></div></div>
+      <div class="nav-item"><button class="nav-item-btn" aria-haspopup="true" aria-expanded="false">Services <span class="chevron" aria-hidden="true"></span></button><div class="dropdown" role="menu"><a href="#seniors">Senior Care</a><a href="#idd">Adults with I/DD</a><a href="#benefits">Benefits Management</a></div></div>
+      <div class="nav-item"><button class="nav-item-btn" aria-haspopup="true" aria-expanded="false">Referrals <span class="chevron" aria-hidden="true"></span></button><div class="dropdown" role="menu"><a href="#how-referrals-work">How It Works</a><a href="#referral-form">Referral Form</a></div></div>
+      <div class="nav-item"><button class="nav-item-btn" aria-haspopup="true" aria-expanded="false">Contact <span class="chevron" aria-hidden="true"></span></button><div class="dropdown" role="menu"><a href="#contact-info">Contact Info</a><a href="#contact-form">Send a Message</a></div></div>
+    </div>
+    <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-drawer" role="menu">
+  <div class="mobile-drawer-section"><div class="mobile-drawer-section-title">Home</div><a href="#hero">Introduction</a><a href="#services">Services</a><a href="#who-we-serve">Who We Serve</a><a href="#how-we-work">How We Work</a></div>
+  <div class="mobile-drawer-section"><div class="mobile-drawer-section-title">About</div><a href="#about">About Scott</a><a href="#credentials">Credentials</a></div>
+  <div class="mobile-drawer-section"><div class="mobile-drawer-section-title">Services</div><a href="#seniors">Senior Care</a><a href="#idd">Adults with I/DD</a><a href="#benefits">Benefits Management</a></div>
+  <div class="mobile-drawer-section"><div class="mobile-drawer-section-title">Referrals</div><a href="#how-referrals-work">How It Works</a><a href="#referral-form">Referral Form</a></div>
+  <div class="mobile-drawer-section"><div class="mobile-drawer-section-title">Contact</div><a href="#contact-info">Contact Info</a><a href="#contact-form">Send a Message</a></div>
+</div>
+
+<div class="page-wrap">
+<main id="main">
+
+  <!-- ANNOUNCE BAR -->
+  <div class="announce-bar">
+    <p>
+      Free Consultations Available &mdash; No commitment. No pressure. Just a conversation.
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSf1mtQkVoGJY_0PW5Zdx6dlEC7GGNesbzxjKdTboJGHffxrSg/viewform?pli=1"
+         target="_blank" rel="noopener noreferrer" class="announce-btn">Free Intake Form</a>
+    </p>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero" style="background:linear-gradient(135deg,rgba(245,130,13,0.04) 0%,#fff 60%);">
+    <div class="hero-split">
+      <div>
+        <h1>Person-centered support for seniors and adults with intellectual and developmental disabilities.</h1>
+        <p>Boutique provider of person-centered support services across the Kansas City region — focused on practical daily support, employment guidance, and benefits-informed planning through a relationship-driven small-provider model.</p>
+        <div class="hero-split-btns">
+          <a href="#contact-form" class="btn btn-orange btn-lg">Schedule a conversation</a>
+          <a href="#services" class="btn btn-outline-dark btn-lg">Learn about our services</a>
+        </div>
+      </div>
+      <div class="hero-img-wrap">
+        <img src="hero.jpeg" alt="Support professional with client" loading="eager" style="width:100%; height:400px; object-fit:cover; border-radius:14px; box-shadow:0 16px 48px rgba(0,0,0,0.14); display:block;"/>
+        <div class="hero-overlay-card">
+          <ul>
+            <li><span class="dot"></span>Practical daily support</li>
+            <li><span class="dot"></span>Employment guidance</li>
+            <li><span class="dot"></span>Benefits-informed planning</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES OVERVIEW -->
+  <section id="services" class="section section-tint">
+    <div class="inner">
+      <div class="section-header"><h2>What we do</h2><p>Comprehensive support across three core areas, grounded in person-centered, relationship-driven care.</p></div>
+      <div class="three-grid">
+        <div class="service-feature-card"><h3>Practical daily support</h3><p>Everyday tasks, routines, and community access — supporting the rhythms that make life meaningful.</p><div style="margin-top:18px;"><a href="#seniors" class="btn btn-outline-orange" style="min-height:42px;padding:9px 18px;font-size:0.88rem;">Senior Care &rarr;</a></div></div>
+        <div class="service-feature-card"><h3>Employment guidance</h3><p>Job discovery, coaching, and ongoing workplace support that respects individual strengths and goals.</p><div style="margin-top:18px;"><a href="#idd" class="btn btn-outline-orange" style="min-height:42px;padding:9px 18px;font-size:0.88rem;">IDD Services &rarr;</a></div></div>
+        <div class="service-feature-card"><h3>Benefits-informed planning</h3><p>Strategic planning that understands benefits regulations without compromising independence.</p><div style="margin-top:18px;"><a href="#benefits" class="btn btn-outline-orange" style="min-height:42px;padding:9px 18px;font-size:0.88rem;">Benefits &rarr;</a></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO WE SERVE -->
+  <section id="who-we-serve" class="section">
+    <div class="inner">
+      <div class="serve-split">
+        <div>
+          <span class="eyebrow">Who We Serve</span>
+          <h2>Built for the people who need us most.</h2>
+          <div class="rule"></div>
+          <p class="lead" style="margin-bottom:16px;">We specialize in working with <strong>seniors</strong> and <strong>adults with intellectual and developmental disabilities</strong> throughout the Kansas City region in Kansas and Missouri.</p>
+          <p style="font-size:0.95rem;color:var(--gray);line-height:1.8;">Our person-centered approach respects the unique needs, preferences, and aspirations of each individual. We understand the complexities of navigating support systems while maintaining dignity and independence.</p>
+          <div style="margin-top:24px;"><a href="#about" class="btn btn-orange">Meet Scott Dixon</a></div>
+        </div>
+        <div>
+          <div class="serve-highlight"><h3>Seniors</h3><ul><li>Managing transitions and maintaining independence</li><li>Navigating health and wellness decisions</li><li>Community engagement and social connection</li><li>Technology assistance and transportation</li></ul></div>
+          <div class="serve-highlight"><h3>Adults with I/DD</h3><ul><li>Employment discovery and workplace support</li><li>Daily living skills and community participation</li><li>Benefits navigation and financial planning</li><li>Workforce transition from high school</li></ul></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK -->
+  <section id="how-we-work" class="section section-tint">
+    <div class="inner">
+      <div class="section-header"><h2>Our relationship-driven small-provider model</h2><p>We believe in deep relationships and personalized support. Here's how we work with you.</p></div>
+      <div class="process-grid">
+        <div class="process-step"><div class="process-step-num">1</div><div><h3>Listen</h3><p>We begin by deeply understanding your unique situation, goals, preferences, and challenges. Your voice shapes every decision we make together.</p></div></div>
+        <div class="process-connector"><div></div></div>
+        <div class="process-step"><div class="process-step-num">2</div><div><h3>Plan</h3><p>Together we develop a personalized support plan that reflects your values and aspirations, ensuring every decision strengthens your independence and long-term stability.</p></div></div>
+        <div class="process-connector"><div></div></div>
+        <div class="process-step"><div class="process-step-num">3</div><div><h3>Support</h3><p>We provide ongoing, relationship-driven support with consistency and care. You'll work with the same trusted people who genuinely know you and your goals.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SCOTT -->
+  <section id="about" class="section">
+    <div class="inner">
+      <div class="serve-split">
+        <div>
+          <img src="portrait.jpg" alt="Scott Dixon, Owner of Anchor Point Supports" style="width:100%;max-width:340px;border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,0.12);" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
+          <div style="display:none;max-width:340px;aspect-ratio:3/4;background:var(--gray-lt);border:2px dashed var(--border);border-radius:14px;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:var(--gray);font-size:0.85rem;text-align:center;padding:24px;"><strong>Scott Dixon</strong><span>Owner, Anchor Point Supports</span><em>Add portrait.png</em></div>
+        </div>
+        <div>
+          <span class="eyebrow">Owner &amp; Founder</span>
+          <h2>Scott Dixon</h2>
+          <div class="rule"></div>
+          <div style="border-left:4px solid var(--orange);padding-left:16px;margin-bottom:22px;"><p style="font-size:1rem;color:var(--blue);font-weight:600;line-height:1.7;font-style:italic;">"My mission is simple: to be a reliable, compassionate support for individuals and families who need help navigating everyday life and important transitions."</p></div>
+          
+          
+          <blockquote style="background:var(--gray-lt);border-left:3px solid var(--orange);border-radius:0 8px 8px 0;padding:18px 20px;margin-bottom:28px;"><p style="font-size:0.93rem;color:var(--gray);font-style:italic;line-height:1.8;">"We keep our client base small on purpose — because everyone we serve deserves our full attention, not just our availability."</p><cite style="font-size:0.8rem;font-weight:800;color:var(--black);font-style:normal;display:block;margin-top:8px;">&mdash; AnchorPoint Supports, LLC</cite></blockquote>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;"><a href="#contact-form" class="btn btn-orange">Contact Scott</a><a href="#services" class="btn btn-blue">View Services</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section id="credentials" class="section section-tint">
+    <div class="inner">
+      <div class="section-header"><h2>Certifications &amp; Credentials</h2><p>Scott holds nationally recognized certifications ensuring every client receives expert, credentialed guidance.</p></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:720px;margin:0 auto;">
+        <div style="background:#fff;border:2px solid var(--border);border-left:4px solid var(--orange);border-radius:12px;padding:28px 24px;"><div style="font-size:0.7rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:var(--orange);margin-bottom:8px;">CESP&trade;</div><div style="font-size:1rem;font-weight:800;color:var(--black);margin-bottom:6px;">Certified Employment Support Professional</div><div style="font-size:0.85rem;color:var(--gray);line-height:1.65;">Nationally recognized credential for specialists supporting individuals with disabilities in finding and keeping meaningful employment.</div></div>
+        <div style="background:#fff;border:2px solid var(--border);border-left:4px solid var(--orange);border-radius:12px;padding:28px 24px;"><div style="font-size:0.7rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:var(--orange);margin-bottom:8px;">WIP-C&trade;</div><div style="font-size:1rem;font-weight:800;color:var(--black);margin-bottom:6px;">Work Incentive Practitioner &ndash; Certified</div><div style="font-size:0.85rem;color:var(--gray);line-height:1.65;">Cornell University &middot; Certified in SSDI/SSI benefits counseling and work incentive planning.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SENIOR CARE -->
+  <section id="seniors" class="section section-tint">
+    <div class="inner">
+      <div class="serve-split">
+        <div>
+          <span class="eyebrow">Senior Care Services</span>
+          <h2>Non-Medical Care for Seniors</h2>
+          <div class="rule"></div>
+          <p class="lead" style="margin-bottom:20px;">Compassionate, attentive support helping older adults stay comfortable, connected, and confident.</p>
+          <div class="serve-highlight"><ul><li>Companionship</li><li>Technology assistance</li><li>Transportation</li><li>Respite care</li></ul></div>
+          <p style="font-size:0.88rem;color:var(--gray);margin-top:14px;">And more &mdash; <a href="#contact-form" style="color:var(--orange);font-weight:700;">contact us</a> to discuss your needs.</p>
+        </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- ADULTS WITH I/DD -->
+  <section id="idd" class="section">
+    <div class="inner">
+      <div class="serve-split">
+        <div style="background:linear-gradient(135deg,#0C2D55,#1A6B8A);border-radius:14px;padding:40px 32px;order:2;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;">
+            <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:16px;"><div style="font-size:0.68rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:var(--orange);margin-bottom:4px;">CESP&trade;</div><div style="font-size:0.85rem;font-weight:700;color:#fff;line-height:1.4;">Certified Employment Support Professional</div></div>
+            <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:16px;"><div style="font-size:0.68rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:var(--orange);margin-bottom:4px;">WIP-C&trade;</div><div style="font-size:0.85rem;font-weight:700;color:#fff;line-height:1.4;">Work Incentive Practitioner &ndash; Certified</div></div>
+          </div>
+        </div>
+        <div style="order:1;">
+          <span class="eyebrow">Adults with I/DD</span>
+          <h2>Employment Supports for Adults with I/DD</h2>
+          <div class="rule"></div>
+          <p class="lead" style="margin-bottom:20px;">Certified job coaching, benefits counseling, and workplace support helping individuals find and keep meaningful work.</p>
+          <div class="serve-highlight"><ul><li>Credentialed Employment Support (CESP&trade;)</li><li>Social Security Benefits Planning (WIP-C&trade;)</li><li>Workforce transition from high school</li></ul></div>
+          <p style="font-size:0.88rem;color:var(--gray);margin-top:14px;">And more &mdash; <a href="#contact-form" style="color:var(--orange);font-weight:700;">contact us</a> to discuss your needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS MANAGEMENT -->
+  <section id="benefits" class="section section-tint">
+    <div class="inner">
+      <div class="section-header"><h2>Benefits Management</h2><p>Expert guidance through complex Social Security and benefits systems — ensuring employment doesn't compromise long-term stability.</p></div>
+      <div class="three-grid">
+        <div class="service-feature-card"><h3>SSDI/SSI Benefits Planning</h3><p>Understand exactly how employment affects your benefits before making changes. Certified guidance from a WIP-C&trade; practitioner.</p></div>
+        <div class="service-feature-card"><h3>Work Incentive Planning</h3><p>Navigate work incentives like Ticket to Work and PASS plans — maximizing your ability to work while protecting your benefits.</p></div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- REFERRALS -->
+  <section id="how-referrals-work" class="section">
+    <div class="inner">
+      <div class="section-header"><h2>Make a Referral</h2><p>Making a referral is simple — contact us directly or use the form below.</p></div>
+      <div class="process-grid" style="margin-bottom:52px;">
+        <div class="process-step"><div class="process-step-num">1</div><div><h3>Reach Out</h3><p>Call, email, or submit the referral form. We respond within 1&ndash;2 business days.</p></div></div>
+        <div class="process-connector"><div></div></div>
+        <div class="process-step"><div class="process-step-num">2</div><div><h3>Free Conversation</h3><p>Scott will talk with you about the individual's situation and what support would help most.</p></div></div>
+        <div class="process-connector"><div></div></div>
+        <div class="process-step"><div class="process-step-num">3</div><div><h3>Support Begins</h3><p>We build a personalized plan together and services start at the individual's pace.</p></div></div>
+      </div>
+      <div id="referral-form" style="max-width:680px;margin:0 auto;">
+        <div class="contact-form-card">
+          <h3 style="font-size:1.3rem;font-weight:900;margin-bottom:6px;">Referral Form</h3>
+          <p style="font-size:0.88rem;color:var(--gray);margin-bottom:26px;line-height:1.6;">Fields marked * are required.</p>
+          <form action="https://formspree.io/f/xpqyngqa" method="post">
+            <div class="form-row" style="margin-bottom:18px;">
+              <div class="form-group"><label class="form-label" for="rf-first">Your First Name *</label><input class="form-control" type="text" id="rf-first" name="first_name" required placeholder="First name"/></div>
+              <div class="form-group"><label class="form-label" for="rf-last">Your Last Name *</label><input class="form-control" type="text" id="rf-last" name="last_name" required placeholder="Last name"/></div>
+            </div>
+            <div class="form-row" style="margin-bottom:18px;">
+              <div class="form-group"><label class="form-label" for="rf-phone">Your Phone *</label><input class="form-control" type="tel" id="rf-phone" name="phone" required placeholder="(816) 000-0000"/></div>
+              <div class="form-group"><label class="form-label" for="rf-email">Your Email *</label><input class="form-control" type="email" id="rf-email" name="email" required placeholder="you@email.com"/></div>
+            </div>
+            <div class="form-group" style="margin-bottom:18px;"><label class="form-label" for="rf-service">Service Needed *</label><select class="form-control" id="rf-service" name="service" required><option value="" disabled selected>Select one</option><option>Senior Care Services</option><option>Employment Support (CESP)</option><option>Benefits Planning (WIP-C)</option><option>Young Adult Workforce Transition</option><option>Not Sure</option></select></div>
+            <div class="form-group" style="margin-bottom:22px;"><label class="form-label" for="rf-notes">Notes</label><textarea class="form-control" id="rf-notes" name="notes" placeholder="Any additional details about the individual and their needs..."></textarea></div>
+            <div class="form-group" style="margin-bottom:16px;"><label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;"><input type="checkbox" required style="width:18px;height:18px;accent-color:var(--orange);flex-shrink:0;margin-top:3px;"/><span style="font-size:0.88rem;color:var(--gray);line-height:1.6;">I have permission to submit this referral. *</span></label></div>
+            <p style="font-size:0.8rem;color:var(--gray);margin-bottom:14px;">* Required fields.</p>
+            <button type="submit" class="btn btn-orange btn-full btn-lg">Submit Referral</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT BAND -->
+  <div style="background:linear-gradient(90deg,#C95A08 0%,#F5820D 50%,#F5A623 100%);padding:26px 28px;">
+    <div class="inner" style="display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap;text-align:center;">
+      <div><div style="font-size:0.68rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.75);margin-bottom:3px;">Phone</div><a href="tel:8162061821" style="color:#fff;font-size:1.5rem;font-weight:900;letter-spacing:-0.02em;">816-206-1821</a></div>
+      <div style="width:1px;height:36px;background:rgba(255,255,255,0.3);" aria-hidden="true"></div>
+      <div><div style="font-size:0.68rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.75);margin-bottom:3px;">Email</div><a href="mailto:info@anchorpointsupports.com" style="color:#fff;font-size:1.05rem;font-weight:700;">info@anchorpointsupports.com</a></div>
+      <div style="width:1px;height:36px;background:rgba(255,255,255,0.3);" aria-hidden="true"></div>
+      <div><div style="font-size:0.68rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.75);margin-bottom:3px;">Free Intake</div><a href="https://docs.google.com/forms/d/e/1FAIpQLSf1mtQkVoGJY_0PW5Zdx6dlEC7GGNesbzxjKdTboJGHffxrSg/viewform?pli=1" target="_blank" rel="noopener noreferrer" style="color:#fff;font-size:1rem;font-weight:700;">Open Form &rarr;</a></div>
+    </div>
+  </div>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact-info" class="section section-tint">
+    <div class="inner">
+      <div class="serve-split">
+        <div>
+          <span class="eyebrow">Contact</span>
+          <h2>Let's talk about support that fits your life.</h2>
+          <div class="rule"></div>
+          <p class="lead" style="margin-bottom:28px;">Ready to explore how we can support you? Reach out with any questions or to schedule a conversation. Free consultations available — no commitment, no pressure.</p>
+          <div class="contact-item"><div class="ci-dot"></div><div><div class="ci-label">Phone</div><div class="ci-value"><a href="tel:8162061821">816-206-1821</a></div></div></div>
+          <div class="contact-item"><div class="ci-dot"></div><div><div class="ci-label">Email</div><div class="ci-value"><a href="mailto:info@anchorpointsupports.com">info@anchorpointsupports.com</a></div></div></div>
+          <div class="contact-item"><div class="ci-dot"></div><div><div class="ci-label">Location</div><div class="ci-value">Prairie Village, KS</div></div></div>
+          <div style="margin-top:24px;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSf1mtQkVoGJY_0PW5Zdx6dlEC7GGNesbzxjKdTboJGHffxrSg/viewform?pli=1" target="_blank" rel="noopener noreferrer" class="btn btn-blue btn-lg">Open Free Intake Form</a></div>
+        </div>
+        <div id="contact-form">
+          <div class="contact-form-card" style="border-top-color:var(--blue);">
+            <h3 style="font-size:1.3rem;font-weight:900;margin-bottom:6px;">Send a Message</h3>
+            
+            <form action="https://formspree.io/f/mojkbovo" method="post">
+              <div class="form-row" style="margin-bottom:18px;">
+                <div class="form-group"><label class="form-label" for="c-first">First Name *</label><input class="form-control" type="text" id="c-first" name="first_name" required autocomplete="given-name" placeholder="First name"/></div>
+                <div class="form-group"><label class="form-label" for="c-last">Last Name *</label><input class="form-control" type="text" id="c-last" name="last_name" required autocomplete="family-name" placeholder="Last name"/></div>
+              </div>
+              <div class="form-group" style="margin-bottom:18px;"><label class="form-label" for="c-phone">Phone *</label><input class="form-control" type="tel" id="c-phone" name="phone" required autocomplete="tel" placeholder="(816) 000-0000"/></div>
+              <div class="form-group" style="margin-bottom:18px;"><label class="form-label" for="c-email">Email *</label><input class="form-control" type="email" id="c-email" name="email" required autocomplete="email" placeholder="you@email.com"/></div>
+              <div class="form-group" style="margin-bottom:22px;"><label class="form-label" for="c-msg">How can we help? *</label><textarea class="form-control" id="c-msg" name="message" required placeholder="Tell us about your situation and what kind of support you're looking for..."></textarea></div>
+              <div class="form-group" style="margin-bottom:14px;"><label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;"><input type="checkbox" required style="width:18px;height:18px;accent-color:var(--blue);flex-shrink:0;margin-top:3px;"/><span style="font-size:0.88rem;color:var(--gray);line-height:1.6;">I agree to be contacted by Anchor Point Supports. *</span></label></div>
+              <p style="font-size:0.8rem;color:var(--gray);margin-bottom:14px;">* Required fields.</p>
+              <button type="submit" class="btn btn-blue btn-full btn-lg">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand"><span class="brand-name">Anchor Point <span>Supports</span></span><p>Person-centered support for seniors and adults with IDD in Prairie Village, KS. &mdash; Scott Dixon, Owner</p><a href="https://docs.google.com/forms/d/e/1FAIpQLSf1mtQkVoGJY_0PW5Zdx6dlEC7GGNesbzxjKdTboJGHffxrSg/viewform?pli=1" target="_blank" rel="noopener noreferrer" class="footer-forms-link">Free Intake Form &rarr;</a></div>
+      <div class="footer-col"><h4>Navigate</h4><ul><li><a href="#hero">Home</a></li><li><a href="#about">About</a></li><li><a href="#seniors">Senior Care</a></li><li><a href="#idd">Adults with I/DD</a></li><li><a href="#benefits">Benefits</a></li><li><a href="#referral-form">Referrals</a></li><li><a href="#contact-form">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:8162061821">816-206-1821</a></li><li><a href="mailto:info@anchorpointsupports.com">info@anchorpointsupports.com</a></li><li><span>Prairie Village, KS</span></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2025 Anchor Point Supports &middot; Scott Dixon, Owner &middot; Prairie Village, KS</p><p><a href="https://www.joeydixon.com/" target="_blank" rel="noopener noreferrer">Website built by Joey Dixon</a></p></div>
+  </div>
+</footer>
+
+</div>
+<script src="main.js"></script>
+</body>
+</html>
