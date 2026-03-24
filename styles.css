@@ -127,7 +127,8 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
   transition: transform 0.2s;
   flex-shrink: 0; margin-top: 1px;
 }
-.nav-item.open .nav-item-btn .chevron { transform: rotate(-135deg) translateY(-2px); }
+.nav-item.open .nav-item-btn .chevron,
+.nav-item:hover .nav-item-btn .chevron { transform: rotate(-135deg) translateY(-2px); }
 .nav-item-btn:hover,
 .nav-item.open .nav-item-btn { background: rgba(255,255,255,0.12); color: #fff; }
 
@@ -154,7 +155,8 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
   border-radius: 0 0 var(--radius) var(--radius);
   display: none; flex-direction: column;
 }
-.nav-item.open .dropdown { display: flex; }
+.nav-item.open .dropdown,
+.nav-item:hover .dropdown { display: flex; }
 .dropdown a {
   padding: 11px 18px;
   font-size: 0.87rem; font-weight: 600;
