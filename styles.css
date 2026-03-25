@@ -101,11 +101,11 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 .nav-bar-inner {
   max-width: var(--max); margin: 0 auto; height: 100%;
   padding: 0 28px;
-  display: flex; align-items: stretch; justify-content: space-between;
+  display: flex; align-items: stretch; justify-content: center;
 }
 
 /* Nav items */
-.nav-items { display: flex; align-items: stretch; flex: 1; }
+.nav-items { display: flex; align-items: stretch; justify-content: center; flex: 0 1 auto; }
 
 .nav-item { position: relative; display: flex; align-items: stretch; }
 
@@ -727,7 +727,7 @@ footer {
 @media (max-width: 960px) {
   .nav-items { display: none; }
 
-  .nav-hamburger { display: flex; }
+  .nav-hamburger { display: flex; margin-left: auto; }
   .serve-grid { grid-template-columns: 1fr; }
   .about-grid { grid-template-columns: 1fr; }
   .about-photo, .about-photo-placeholder { max-width: 280px; }
