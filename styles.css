@@ -749,6 +749,9 @@ footer {
   .values-row { grid-template-columns: 1fr; }
   .hero-fullbleed { min-height: 400px; }
   .hero-fullbleed-inner { padding: 52px 18px; }
+  /* Benefits 2-col and seniors card grid collapse to 1 col */
+  #benefits > .inner > div[style*="grid-template-columns:1fr 1fr"],
+  #seniors > .inner > .three-grid { grid-template-columns: 1fr !important; }
 }
 
 /* =====================================================
