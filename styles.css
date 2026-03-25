@@ -100,8 +100,9 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 }
 .nav-bar-inner {
   max-width: var(--max); margin: 0 auto; height: 100%;
-  padding: 0 28px;
-  display: flex; align-items: stretch; justify-content: center;
+  padding: 0 16px 0 28px;
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
 }
 
 /* Nav items */
@@ -171,8 +172,9 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 /* Hamburger */
 .nav-hamburger {
   display: none; flex-direction: column; gap: 5px;
-  background: none; border: none; padding: 8px; cursor: pointer;
+  background: none; border: none; padding: 12px; cursor: pointer;
   align-items: center; justify-content: center;
+  min-width: 44px; min-height: 44px;
 }
 .nav-hamburger span { display: block; width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: all 0.28s; }
 .nav-hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -183,7 +185,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 .mobile-drawer {
   display: none; flex-direction: column;
   position: fixed; top: var(--total-h); left: 0; right: 0;
-  background: var(--blue-dk); z-index: 598;
+  background: var(--blue-dk); z-index: 610;
   max-height: calc(100vh - var(--total-h));
   overflow-y: auto;
   border-top: 1px solid rgba(255,255,255,0.1);
@@ -725,33 +727,71 @@ footer {
    RESPONSIVE
 ===================================================== */
 @media (max-width: 960px) {
+  /* Nav */
   .nav-items { display: none; }
+  .nav-hamburger {
+    display: flex;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  /* Disable hover dropdowns on mobile */
+  .nav-item:hover .dropdown { display: none; }
+  .nav-item.open .dropdown { display: flex; }
 
-  .nav-hamburger { display: flex; margin-left: auto; }
+  /* Grids */
   .serve-grid { grid-template-columns: 1fr; }
   .about-grid { grid-template-columns: 1fr; }
-  .about-photo, .about-photo-placeholder { max-width: 280px; }
   .values-row { grid-template-columns: 1fr 1fr; }
   .referral-layout { grid-template-columns: 1fr; }
   .contact-layout { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
   .form-row { grid-template-columns: 1fr; }
   .cred-grid { grid-template-columns: 1fr; max-width: 400px; }
+
+  /* New layout grids */
+  .hero-split { grid-template-columns: 1fr; gap: 48px; padding: 52px 28px 80px; }
+  .hero-overlay-card { position: static; margin-top: 20px; }
+  .three-grid { grid-template-columns: 1fr !important; }
+  .serve-split { grid-template-columns: 1fr; }
+  .process-grid { grid-template-columns: 1fr; gap: 28px; }
+  .process-connector { display: none; }
+  .process-step { text-align: left; display: flex; gap: 18px; align-items: flex-start; }
+  .process-step-num { margin: 0; flex-shrink: 0; }
+
+  /* Inline grid overrides */
+  #seniors > .inner > div,
+  #benefits > .inner > div[style*="grid"],
+  div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
+
+  /* Old layout */
+  .services-card-grid { grid-template-columns: 1fr 1fr; }
+  .benefits-split { grid-template-columns: 1fr; }
+  .about-bio-grid { grid-template-columns: 1fr; }
+  .bio-photo, .bio-photo-placeholder { max-width: 260px; }
+  .bio-name-card { position: static; transform: none; margin-top: 12px; display: inline-block; }
+  .certs-grid { grid-template-columns: 1fr 1fr; }
+  .about-photo, .about-photo-placeholder { max-width: 280px; }
 }
+
 @media (max-width: 640px) {
   html { font-size: 16px; }
   :root { --bar-h: 100px; --nav-h: 48px; --total-h: 148px; }
-  .section { padding: 52px 18px; }
+  .section { padding: 48px 18px; }
   .page-hero { padding: 44px 18px 38px; }
   footer { padding: 40px 18px 24px; }
   .form-box { padding: 26px 18px; }
+  .contact-form-card { padding: 24px 18px; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .values-row { grid-template-columns: 1fr; }
   .hero-fullbleed { min-height: 400px; }
   .hero-fullbleed-inner { padding: 52px 18px; }
-  /* Benefits 2-col and seniors card grid collapse to 1 col */
-  #benefits > .inner > div[style*="grid-template-columns:1fr 1fr"],
-  #seniors > .inner > .three-grid { grid-template-columns: 1fr !important; }
+  .hero-split { padding: 40px 18px 60px; }
+  .services-card-grid { grid-template-columns: 1fr; }
+  .certs-grid { grid-template-columns: 1fr; }
+  .contact-info-row { flex-direction: column; gap: 20px; }
 }
 
 /* =====================================================
@@ -927,29 +967,6 @@ footer {
 .cert-card .cert-issuer {
   margin-top: 12px; font-size: 0.75rem; font-weight: 700;
   color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.08em;
-}
-
-@media (max-width: 960px) {
-  .services-card-grid { grid-template-columns: 1fr 1fr; }
-  .benefits-split { grid-template-columns: 1fr; }
-  .about-bio-grid { grid-template-columns: 1fr; }
-  .bio-photo, .bio-photo-placeholder { max-width: 260px; }
-  .bio-name-card { position: static; transform: none; margin-top: 12px; display: inline-block; }
-  .certs-grid { grid-template-columns: 1fr 1fr; }
-  .hero-split { grid-template-columns: 1fr; gap: 48px; padding: 52px 28px 80px; }
-  .hero-overlay-card { position: static; margin-top: 20px; }
-  .three-grid { grid-template-columns: 1fr; }
-  .serve-split { grid-template-columns: 1fr; }
-  .process-grid { grid-template-columns: 1fr; gap: 28px; }
-  .process-connector { display: none; }
-  .process-step { text-align: left; display: flex; gap: 18px; align-items: flex-start; }
-  .process-step-num { margin: 0; flex-shrink: 0; }
-}
-@media (max-width: 600px) {
-  .services-card-grid { grid-template-columns: 1fr; }
-  .certs-grid { grid-template-columns: 1fr; }
-  .contact-form-card { padding: 24px 18px; }
-  .contact-info-row { flex-direction: column; gap: 20px; }
 }
 
 /* =====================================================

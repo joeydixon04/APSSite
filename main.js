@@ -1,37 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-  /* ── Active nav link ── */
-  var page = document.body.getAttribute('data-page') || '';
-  document.querySelectorAll('[data-page]').forEach(function(el) {
-    if (el.getAttribute('data-page') === page) {
-      el.classList.add('active');
-    }
-  });
-
-  /* ── Dropdown menus ── */
+  /* ── Dropdown menus (desktop hover handled by CSS) ── */
   var navItems = document.querySelectorAll('.nav-item');
 
-  navItems.forEach(function(item) {
-    var btn = item.querySelector('.nav-item-btn');
-    if (!btn) return;
-
-    btn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var isOpen = item.classList.contains('open');
-
-      // Close all
-      navItems.forEach(function(i) { i.classList.remove('open'); });
-
-      // Toggle this one
-      if (!isOpen) {
-        item.classList.add('open');
-      }
-    });
-  });
-
   // Close on outside click
-  document.addEventListener('click', function() {
-    navItems.forEach(function(i) { i.classList.remove('open'); });
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-item')) {
+      navItems.forEach(function(i) { i.classList.remove('open'); });
+    }
   });
 
   /* ── Mobile hamburger ── */
@@ -39,9 +15,24 @@ document.addEventListener('DOMContentLoaded', function() {
   var drawer = document.querySelector('.mobile-drawer');
 
   if (hamburger && drawer) {
-    hamburger.addEventListener('click', function() {
-      var open = drawer.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', open);
+    hamburger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = drawer.classList.contains('open');
+      if (isOpen) {
+        drawer.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      } else {
+        drawer.classList.add('open');
+        hamburger.setAttribute('aria-expanded', 'true');
+      }
+    });
+
+    // Close drawer when a link inside it is tapped
+    drawer.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        drawer.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
     });
   }
 
@@ -72,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
           e.preventDefault();
           navItems.forEach(function(i) { i.classList.remove('open'); });
           if (drawer) drawer.classList.remove('open');
+          if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
           scrollToHash(hash);
         }
       }
